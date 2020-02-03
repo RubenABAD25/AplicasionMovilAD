@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="person" class="icon-login"></ion-icon>
+        <ion-input type="email" placeholder="Username" [(ngModel)]="usuario.email" name="usuario.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock" class="icon-login"></ion-icon>
+    <ion-input type="password" placeholder="Password" [(ngModel)]="usuario.clave" name="usuario.clave"></ion-input>
+      </ion-item>
+    </ion-list>
+    
+    <ion-grid fixed>
+      <ion-row class="ion-text-center">
+        <ion-col size="6">
+          <ion-button (click)="login()" color="dark">
+            <ion-icon slot="start" name="contact"></ion-icon>
+            Login
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button color="dark" [routerLink]="['/registrar']" routerLinkActive="router-link-active"  >
+            <ion-icon slot="start" name="add"></ion-icon>
+            Registro
+          </ion-button>
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+  </ion-content>

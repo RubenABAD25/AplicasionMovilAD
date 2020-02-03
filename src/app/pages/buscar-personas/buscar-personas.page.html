@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>buscarPersonas</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Codigo</ion-label>
+ <ion-input type="number" placeholder="Awesome Input"[(ngModel)]="id"></ion-input>
+ <br>
+ <ion-label>Codigo</ion-label>
+ <ion-input type="number" placeholder="Awesome Input"[(ngModel)]="persona.id"></ion-input>
+ <ion-label>nombre</ion-label>
+ <ion-input type="text" placeholder="Awesome Input"[(ngModel)]="persona.nombre"></ion-input>
+ <ion-label>apelido</ion-label>
+ <ion-input type="text" placeholder="Awesome Input"[(ngModel)]="persona.apellido"></ion-input>
+<ion-button (click)="buscar()">
+buscar
+</ion-button>
+</ion-content>
