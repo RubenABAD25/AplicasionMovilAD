@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "movie",
+        "name": "Pelculas",
+        "redirectTo": "/peliculas"
+    },
+    {
+        "icon": "search",
+        "name": "buscar",
+        "redirectTo": "/buscar-peliculas"
+    },
+    {
+        "icon": "cart",
+        "name": "Carrito",
+        "redirectTo": "/carrito"
+    },
+    {
+        "icon": "user",
+        "name": "login",
+        "redirectTo": "/login"
+    }
+]

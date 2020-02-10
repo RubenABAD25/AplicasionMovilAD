@@ -10,12 +10,12 @@ import { Usuario } from '../pages/login/usuario';
 })
 export class UsuariologinService {
   [x: string]: any;
-  private url: string='http://localhost:8080/logeo/srv/practicas/logeo';
+  private url: string='http://localhost:8080/Peliculas/srv/serviciosUsuario/login';
   private headers= new HttpHeaders({'Content-Type':'application/json'});
   constructor(private http: HttpClient) { }
 
-  Login(usuario: Usuario):Observable<Respuesta>{
-    return this.http.post<Respuesta>(this.url,usuario, {headers: this.headers});
+  Login(usuario: Usuario):Observable<number>{
+    return this.http.post<number>(this.url,usuario, {headers: this.headers});
   }
   async presentToast(mensaje: string) {
     const toast = await this.taostCtrl.create({

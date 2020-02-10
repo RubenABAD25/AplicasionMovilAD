@@ -28,6 +28,14 @@ const routes: Routes = [
     path: 'pagina-inicio',
     loadChildren: () => import('./pages/pagina-inicio/pagina-inicio.module').then( m => m.PaginaInicioPageModule)
   },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'buscar-peliculas',
+    loadChildren: () => import('./pages/buscar-peliculas/buscar-peliculas.module').then( m => m.BuscarPeliculasPageModule)
+  },
 ];
 
 @NgModule({

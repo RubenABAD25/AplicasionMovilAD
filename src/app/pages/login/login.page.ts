@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class LoginPage implements OnInit {
 
   usuario: Usuario = new  Usuario();
+  idUsr:number;
 
   constructor(private service: UsuariologinService,
               private taostCtrl: ToastController,
@@ -22,10 +23,13 @@ export class LoginPage implements OnInit {
 
   login() {
     this.service.Login(this.usuario).subscribe(response => {
-      if(response.respuesta === 'existe') {
+      console.log(response);
+      if(response >0) {
         this.presentToast('Logueado correctamente');
-        this.router.navigate(['/peliculas']);
-      } else if(response.respuesta === 'No entity found for query') {
+        this.router.navigate(['/peliculas'],  {queryParams: {
+          idUsr:response
+        }});
+      } else if(response ==0) {
         this.presentToast('Datos incorrectos');
       } else {
         this.presentToast('Error');

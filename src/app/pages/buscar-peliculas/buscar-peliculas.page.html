@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>buscar-peliculas</ion-title>
+  </ion-toolbar>
+  <ion-searchbar placeholder="Buscar una pelicula" (ionChange)="onSearchChange($event)"></ion-searchbar>
+</ion-header>
+
+
+<ion-card *ngFor="let pelicula of peliculas">
+  <ion-img [src]="'data:image/JPEG;base64,'+pelicula.portada"></ion-img>
+  <ion-card-header>
+    <ion-card-subtitle>{{ pelicula.sinopsis }}</ion-card-subtitle>
+    <ion-card-title>{{ pelicula.nombre }}</ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+<ion-content>
+
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-content>
+
+  <ion-card>
+    <ion-img [src]="'data:image/JPEG;base64,'+pelicula.portada"></ion-img>
+    <ion-card-header>
+      
+      <ion-card-title>{{ pelicula.nombre }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+     Año {{ pelicula.anio }}
+    </ion-card-content>
+    <ion-card-subtitle>{{ pelicula.sinopsis }}</ion-card-subtitle>
+  </ion-card>
+
+  <ion-button (click)="cerrar()">
+    Cerrar
+  </ion-button>
+</ion-content>
